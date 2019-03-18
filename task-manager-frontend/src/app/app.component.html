@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h3 style="margin-left: 20px;">Task Manager</h3>
+<!--<input id="focusedInput" [(ngModel)]="operation" disabled 
+                           style="background-color: white;
+                                  border: none; 
+                                  margin-left:20px; 
+                                  font-size: 20px;"> -->
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item"><a routerLink="/add" (click)="setOperation('Add Task')" style="font-size: 15px;"><b>Add Task</b></a></li>
+    <li class="nav-item"><a routerLink="/view" (click)="setOperation('View Task')" style="font-size: 15px;"><b>View Task</b></a></li>
+  </ul>
+    <router-outlet></router-outlet>
+  <div>

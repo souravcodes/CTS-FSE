@@ -1,0 +1,34 @@
+<br>
+<app-task-manager-search (taskDetailsEmitter)="populateTasks($event)"></app-task-manager-search>
+<div *ngFor="let task of tasks" [hidden]="!show">
+    <table style="width: 100%;">
+        <tr>
+          <th><label>#</label></th>
+          <th><label>Task Name</label></th>
+          <th><label>Parent</label></th>
+          <th><label>Priority</label></th>
+          <th><label>Start Date</label></th>
+          <th><label>End Date</label></th>
+        </tr>
+      <tr>
+          <td style="width:5%;"><input type="text" [(ngModel)]="task.taskId" style="width:90%;" class="my-view-input" disabled/></td>
+          <td><input type="text" [(ngModel)]="task.task" style="width:90%;" class="my-view-input" disabled/></td>
+          <td><input type="text" [(ngModel)]="task.parent.parentTask" style="width:90%;" class="my-view-input" [disabled]="task.taskId!==markedIndex"/></td>
+          <td><input type="number" [(ngModel)]="task.priority" style="width:90%;" class="my-view-input" [disabled]="task.taskId!==markedIndex"/></td>
+          <td><input type="date" [(ngModel)]="task.startDate" style="width:90%;" class="my-view-input" [disabled]="task.taskId!==markedIndex"/></td>
+          <td><input type="date" [(ngModel)]="task.endDate" style="width:90%;" class="my-view-input" [disabled]="task.taskId!==markedIndex"/></td>
+          <td style="width:5%;"><button class="my-button" (click)="markRow(task.taskId);updateTask(task);">edit</button></td>
+          <td style="width:8%;"><button class="my-button" (click)="markRow(task.taskId);endTask(task)">End Task</button></td>
+      </tr>
+    </table>
+    <br><br>
+</div>
+<!--style="width: 90%;margin-left: 5px; margin-right: 5px"-->
+<!-- <td><input type="text" [(ngModel)]="task.taskId" style="width:90%;" class="my-view-input" disabled/></td>
+<td><input type="text" [(ngModel)]="task.task" style="width:90%;" class="my-view-input"/></td>
+<td><input type="text" [(ngModel)]="task.parentTask" style="width:90%;" class="my-view-input"/></td>
+<td><input type="text" [(ngModel)]="task.priority" style="width:90%;" class="my-view-input"/></td>
+<td><input type="text" [(ngModel)]="task.startDate" style="width:90%;" class="my-view-input"/></td>
+<td><input type="text" [(ngModel)]="task.endDate" style="width:90%;" class="my-view-input"/></td>
+<td><button class="my-button">Edit</button></td>
+<td><button class="my-button">End Task</button></td> -->

@@ -1,0 +1,39 @@
+<!--<div class="container">
+  <form class="form-horizontal"> -->
+    <h3>Update task</h3>
+    <div>
+      <label style="margin-left:10%;width:10%">Task ID</label>
+      <input [(ngModel)]="taskId" style="width:35%;margin-left: 10px;" class="my-input" disabled type="text">
+    </div>
+    <br>
+    <div>
+      <label style="margin-left:10%;width:10%">Task</label>
+      <input [(ngModel)]="taskName" style="width:35%;margin-left: 10px;" class="my-input" disabled id="focusedInput" type="text">
+    </div>
+    <br>
+    <div>
+      <label for="sliderId" style="margin-left:10%;width:10%">Priority</label>
+      <input [(ngModel)]="sliderPointerVal" id="sliderId" type="range" class="slider my-input" style="display:inline;width:35%;margin-left: 10px;" 
+      max="30" min="1" value="{{sliderPointerVal}}" step=1 />
+      {{sliderPointerVal}}
+    </div>
+    <br>
+    <div>
+      <label style="margin-left:10%;width:10%">Parent Task</label>
+      <input [(ngModel)]="parentTask" style="width:35%; margin-left: 10px;" class="my-input" id="focusedInput" type="text">
+    </div>
+    <br>
+    <div>
+      <label style="margin-left:10%;width:10%">Start Date</label>
+      <input [(ngModel)]="startDate" style="width:25%; margin-left: 10px;" class="my-input" id="focusedInput" type="date">
+    </div>
+    <br>
+    <div>
+      <label style="margin-left:10%;width:10%">End Date</label>
+      <input [(ngModel)]="endDate" style="width:25%; margin-left: 10px;" class="my-input" id="focusedInput" type="date">
+    </div>
+    <br>
+    <div>
+      <button style="margin-left:200px;" class="my-button" type="submit" (click)="updateTask();">update</button>
+      <button style="margin-left:10px;" class="my-button" type="submit" (click)="cancelUpdate();">cancel</button>
+    </div>
