@@ -1,0 +1,22 @@
+<div>
+  <label for="taskNameId" style="width:10%">Task</label>
+  <input [(ngModel)]="taskName" style="width:35%;margin-left: 10px;" (input)="getTask();" class="my-input" id="taskNameId" type="text"/>
+  <label for="parentIdId" style="margin-left:5%;width:10%">Parent Task</label>
+  <input [(ngModel)]="parentId" style="width:35%; margin-left: 10px;" (input)="getTask();" class="my-input" id="parentIdId" type="text"/>
+</div>
+<br>
+<div>
+  <label for="priorityFromId" style="width:10%">Priority From</label>
+  <input [(ngModel)]="priorityFrom" style="width:11%;margin-left: 10px;" (input)="getTask();" class="my-input" min="1" max="30" id="priorityFromId" type="number"/>
+  <label for="priorityToId" style="width:8%;margin-left:4%;">Priority To</label>
+  <input [(ngModel)]="priorityTo" style="width:11%;margin-left: 10px;" (input)="getTask();" class="my-input" min="1" max="30" id="priorityToId" type="number"/>
+  <label for="startDateId" style="width:10%; margin-left:5%">Start Date</label>
+  <input [(ngModel)]="startDate" style="width:13%;margin-left: 10px;" (input)="getTask();" class="my-input" id="startDateId" type="date"/>
+  <label for="endDateId" style="width:7%;margin-left:1%;">End date</label>
+  <input [(ngModel)]="endDate" style="width:13%; margin-left: 10px;" (input)="getTask();" class="my-input" id="endDateId" type="date"/>
+</div>
+<!-- <br>
+<div>
+  <button type="submit" style="float:right; margin-right:3%;" (click)="getTask();" class="my-button">Search</button>
+</div> -->
+<hr>

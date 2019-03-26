@@ -1,0 +1,76 @@
+<br>
+<!--<div class="container">
+  <form class="form-horizontal"> -->
+      <!-- <div>
+          <label style="margin-left:10%;width:10%">Task ID</label>
+          <input [(ngModel)]="taskId" style="width:35%;margin-left: 10px;" class="my-input" type="text">
+        </div> -->
+    <div>
+      <label style="margin-left:10%;width:10%">Task</label>
+      <input [(ngModel)]="taskName" style="width:35%;margin-left: 10px;" class="my-input" type="text">
+    </div>
+    <br>
+    <div>
+      <label for="sliderId" style="margin-left:10%;width:10%">Priority</label>
+      <input [(ngModel)]="sliderPointerVal" id="sliderId" type="range" class="slider my-input" style="display:inline;width:35%;margin-left: 10px;" 
+      max="30" min="1" step=1 (input)="sliderPointerChange($event.target.value)"/>
+      {{sliderPointerVal}}
+    </div>
+    <br>
+    <div>
+      <label style="margin-left:10%;width:10%">Parent Task</label>
+      <input [(ngModel)]="parentId" style="width:35%; margin-left: 10px;" class="my-input" type="text">
+    </div>
+    <br>
+    <div>
+      <label style="margin-left:10%;width:10%">Start Date</label>
+      <input [(ngModel)]="startDate" style="width:25%; margin-left: 10px;" class="my-input" type="date">
+    </div>
+    <br>
+    <div>
+      <label style="margin-left:10%;width:10%">End Date</label>
+      <input [(ngModel)]="endDate" style="width:25%; margin-left: 10px;" class="my-input" type="date">
+    </div>
+    <br>
+    <div>
+      <button style="margin-left:200px;" class="my-button" type="submit" (click)="addTask();">add task</button>
+      <button style="margin-left:10px;" class="my-button" type="submit" (click)="resetPage();">reset</button>
+    </div>
+    <!--</div>
+  </form> -->
+
+<!-- <br>
+<div class="container">
+  <div class="col-md-12">
+<table style="width: 70%;">
+  <tr style="width: 80%">
+    <td><label>Task</label></td>
+    <td><input type="text" /></td>
+  </tr>
+  <tr style="width: 80%">
+    <td><label>Priority</label></td>
+    <td><input type="range" max="30" min="1" value="{{sliderPointerVal}}" class="slider" step=1 (input)="sliderPointerChange($event.target.value)"
+      /></td>{{ sliderPointerVal }}
+  </tr>
+  <tr style="width: 80%">
+    <td><label>Parent Task</label></td>
+    <td><input type="text" /></td>
+  </tr>
+  <tr style="width: 80%">
+    <td><label>Start Date</label></td>
+    <td><input type="date" /></td>
+  </tr>
+  <tr style="width: 80%">
+    <td><label>End Date</label></td>
+    <td><input type="date" /></td>
+  </tr>
+</table>
+<br>
+<table style="width: 50%">
+  <tr style="width: 80%; text-align: right">
+    <td><button class="btn-primary" type="submit" >add task</button></td>
+    <td><button class="btn-danger" type="reset" >reset</button></td>
+  </tr>
+</table>
+</div>
+</div> -->
